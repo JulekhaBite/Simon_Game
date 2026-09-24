@@ -167,13 +167,13 @@ Some features that can be added in the future:
 Clone the repository:
 
    bash
-git clone https://github.com/yourusername/simon-says-game.git
+git clone https://github.com/JulekhaBite/Simon_Game.git
 
 
 Open the project folder:
 
   bash
-cd simon-says-game
+cd simon_Game
 
 
 Then open `index.html` in your browser.
@@ -181,16 +181,7 @@ Then open `index.html` in your browser.
 You can also use **VS Code + Live Server** to run the project.
 
 ## 📸 Screenshots
-
-Add screenshots of your game here:
-
-  text
-Add your game screenshot here
-
-
-For example:
-
-`![Simon Says Game](screenshot.png)`
+<img width="566" height="592" alt="simonpicture" src="https://github.com/user-attachments/assets/6a23d257-3b97-418a-8291-a942dcc1fe0a" />
 
 ## 👩‍💻 Author
 
@@ -200,14 +191,14 @@ Computer Science & Engineering Student
 
 ### 🔗 Connect With Me
 
-* GitHub: `https://github.com/yourusername`
-* LinkedIn: `Add your LinkedIn profile link here`
+* GitHub: `https://github.com/Julekhabite`
+* Email : `jule78011@gmail.com`
 
 ## ⭐ Support
 
 If you like this project, please consider giving the repository a ⭐ on GitHub!
 
----
+
 
 ### 📜 License
 
