@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simon Says - Classic Memory Game</title>
+  <meta name="description" content="A classic Simon Says memory sequence game built with HTML, CSS, and Vanilla JavaScript with synthesized retro audio and neon visual effects.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background-glow">
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+  </div>
+
+  <main class="game-container">
+    <!-- Header -->
+    <header class="game-header">
+      <div class="title-wrap">
+        <h1 class="game-title">SIMON <span class="accent-text">SAYS</span></h1>
+        <span class="badge">ARCADE CLASSIC</span>
+      </div>
+      <p class="subtitle">Watch the pattern, remember the sequence, and repeat!</p>
+    </header>
+
+    <!-- Top Status / Stats Bar -->
+    <section class="stats-panel" aria-label="Game statistics">
+      <div class="stat-card">
+        <span class="stat-label">LEVEL</span>
+        <span class="stat-value" id="current-score">00</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">BEST SCORE</span>
+        <span class="stat-value" id="high-score">00</span>
+      </div>
+      <div class="controls-pill">
+        <label class="switch-container" title="Strict mode: One mistake and game restarts from level 1">
+          <input type="checkbox" id="strict-toggle">
+          <span class="switch-slider"></span>
+          <span class="switch-text">STRICT</span>
+        </label>
+        <button id="sound-toggle" class="icon-btn" title="Toggle Sound" aria-label="Toggle Sound">
+          <svg id="sound-icon-on" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+          <svg id="sound-icon-off" class="icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <line x1="23" y1="9" x2="17" y2="15"></line>
+            <line x1="17" y1="9" x2="23" y2="15"></line>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- Simon Game Board -->
+    <div class="simon-board-wrapper">
+      <div class="simon-board" id="simon-board">
+        <!-- Colored Quadrants -->
+        <button type="button" class="pad pad-green" id="green" data-color="green" data-key="Q" aria-label="Green pad">
+          <span class="key-hint">Q</span>
+        </button>
+        <button type="button" class="pad pad-red" id="red" data-color="red" data-key="W" aria-label="Red pad">
+          <span class="key-hint">W</span>
+        </button>
+        <button type="button" class="pad pad-yellow" id="yellow" data-color="yellow" data-key="A" aria-label="Yellow pad">
+          <span class="key-hint">A</span>
+        </button>
+        <button type="button" class="pad pad-blue" id="blue" data-color="blue" data-key="S" aria-label="Blue pad">
+          <span class="key-hint">S</span>
+        </button>
+
+        <!-- Center Control Console -->
+        <div class="center-console">
+          <div class="console-inner">
+            <span class="brand-text">SIMON</span>
+            <div class="digital-display" id="display-screen">
+              <span id="display-text">READY</span>
+            </div>
+            <button id="start-btn" class="action-btn">
+              <span id="start-btn-label">START</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Status & Guide Footer -->
+    <footer class="game-footer">
+      <div class="status-banner" id="status-message">Press START or press SPACEBAR to begin</div>
+      <div class="keyboard-hints">
+        <span>Keyboard:</span>
+        <span class="key-tag">Q</span> Green
+        <span class="key-tag">W</span> Red
+        <span class="key-tag">A</span> Yellow
+        <span class="key-tag">S</span> Blue
+        <span class="key-tag">Space</span> Start
+      </div>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
