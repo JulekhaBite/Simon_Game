@@ -8,7 +8,7 @@ The game tests your memory and concentration by generating a sequence of colored
 
 👉 Add your GitHub Pages live demo link here:
 
-`https://yourusername.github.io/simon-says-game/`
+`https://JulekhaBite.github.io/Simon_Game/`
 
 ## 📌 Features
 
